@@ -1,0 +1,87 @@
+.login-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left video section styling */
+.video-section {
+    position: relative;
+    flex: 1;
+    background-color: #000;
+    overflow: hidden;
+}
+.video-section video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+/* Animated PlanetPledge text over video */
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+/*For horizontal line */
+.animated-line {
+    width: 0;
+    height: 2px;
+    background-color: white;
+    margin: 0.5rem auto;
+    animation: expand 2s ease forwards;
+}
+
+@keyframes expand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%; /* Adjust width as needed */
+    }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    opacity: 0.8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+/* Right form section styling */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.form-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form button hover */
+button:hover {
+    transform: scale(1.05);
+}

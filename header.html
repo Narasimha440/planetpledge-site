@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanetPledge - Header</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(34, 139, 34, 0.397);
+    padding: 10px 0;
+}
+</style>
+<body>
+    <header class="flex items-center justify-between p-4 bg-green-800">
+        <div class="flex items-center">
+            <a href="index.html">
+                <img src="img/planetpledgeclean.png" alt="Planet Pledge Logo" class="h-10" draggable="false">
+            </a>
+            <span class="ml-4 text-xl font-bold">PlanetPledge</span>
+        </div>
+        <nav>
+            <a href="index.html" class="px-4 py-2 bg-green-600 shadow-lg shadow-green-600/50 text-white rounded hover:bg-green-700">Home</a>
+            <a href="aqi.html" class="px-4 py-2 bg-green-600 shadow-lg shadow-green-600/50 text-white rounded hover:bg-green-700">Air Quality Index</a>
+            <a href="donation.html" class="px-4 py-2 bg-green-600 shadow-lg shadow-green-600/50 text-white rounded hover:bg-green-700">Donate Now</a>
+            <a href="form.html" class="px-4 py-2 bg-green-600 shadow-lg shadow-green-600/50 text-white rounded hover:bg-green-700">Login Or Register</a>
+        </nav>
+    </header>
+</body>
+</html>

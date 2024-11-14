@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Pledge</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/imagesection.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            transition: opacity 0.2s ease-in-out;
+            top: 100%;
+            opacity: 0;
+        }
+        .dropdown.show .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+        .swipe-button {
+            transition: transform 0.3s ease;
+        }
+        .swipe-button:hover {
+            transform: translateX(5px);
+        }
+        .dropdown-item {
+            position: relative;
+            overflow: hidden;
+        }
+        .dropdown-item .bg-slide {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
+            z-index: 0;
+        }
+        .dropdown-item:hover .bg-slide {
+            transform: translateX(0);
+        }
+        .dropdown-item:hover .text {
+            position: relative;
+            z-index: 1;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: rgba(34, 139, 34, 0.8);
+            padding: 10px 0;
+        }
+        #heading {
+            position: absolute;
+            padding-left: 30px;
+            margin-top: -5px;
+        }
+        .nav-but {
+            margin-right: 60px;
+        }
+        #profile-pic {
+            margin-left: 20px; /* Adjust space between buttons and profile picture */
+        }
+        header .nav-but {
+            display: flex;
+            align-items: center;
+        }
+        main {
+            margin-top: 80px; /* Add margin to prevent content from being hidden under the header */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="flex flex-wrap items-center justify-between p-4 bg-green-800 relative z-10">
+        <div class="flex items-center">
+            <a href="index.html">
+                <img src="img/planetpledgeclean.png" alt="Planet Pledge Logo" class="h-10" draggable="false">
+            </a>
+            <span id="heading" class="ml-4 text-xl font-bold">PlanetPledge</span>
+        </div>
+        <nav class="flex items-center space-x-4 mt-4 sm:mt-0">
+            <a href="loghome.html" class="px-4 py-2 bg-green-600 shadow-lg shadow-green-600/50 text-white rounded hover:bg-green-700">Home</a>
+            <a href="aqi.html" class="px-4 py-2 bg-green-600 shadow-lg shadow-green-600/50 text-white rounded hover:bg-green-700">Air Quality Index</a>
+            <a href="donation.html" class="px-4 py-2 bg-green-600 shadow-lg shadow-green-600/50 text-white rounded hover:bg-green-700">Donate Now</a>
+            <div id="profile-dropdown" class="dropdown relative flex items-center">
+                <img id="profile-pic" src="img/default-profile-picture-url.png" alt="Profile Pic" class="h-10 w-10 rounded-full cursor-pointer" draggable="false">
+                <div class="dropdown-content hidden bg-white rounded shadow-lg mt-2 p-4 absolute right-0">
+                    <div class="dropdown-item">
+                        <a href="my-account.html" class="block text-gray-700 py-2 swipe-button">
+                            <span class="bg-slide bg-green-600"></span>
+                            <span class="text">My Account</span>
+                        </a>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="enrollnow.html" class="block text-gray-700 py-2 swipe-button">
+                            <span class="bg-slide bg-green-600"></span>
+                            <span class="text">Job Application</span>
+                        </a>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="logout.html" class="block text-gray-700 py-2 swipe-button">
+                            <span class="bg-slide bg-red-600"></span>
+                            <span class="text"><strong>Logout</strong></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="image-section">
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="vid/video-section.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <div class="overlay">
+            <h2>Take Action, Save Our Planet</h2>
+            <p>Join us in protecting Earth's environment.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="p-8 bg-white shadow-md my-6 mx-4 rounded-lg">
+        <h1 class="text-2xl font-bold mb-6">Planet Pledge: Restoring the Planet, Empowering People</h1>
+        
+        <section class="space-y-4 text-gray-700">
+            <p class="text-lg mb-4 text-center">
+                At Planet Pledge, our mission is to clean up our environment, focusing on the ocean’s waste while creating job opportunities to combat unemployment. Our initiatives combine environmental responsibility with social empowerment to build a cleaner, greener, and more inclusive world.
+            </p>
+        </section>
+
+        <section class="p-8 bg-gray-100 text-gray-800 rounded-lg shadow-md my-6 mx-4">
+            <h2 class="text-2xl font-bold mb-4">Our Key Objectives</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-start space-x-4">
+                    <img src="img/animated-recycling.gif" alt="Ocean Cleanup" class="w-16 h-16">
+                    <div>
+                        <h3 class="font-bold text-lg">Ocean Cleanup</h3>
+                        <p>Engage in organized efforts to remove waste from oceans, rivers, and coastal areas.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <img src="img/waste-reduction.gif" alt="Waste Reduction" class="w-16 h-16">
+                    <div>
+                        <h3 class="font-bold text-lg">Waste Reduction</h3>
+                        <p>Focus on sustainable waste disposal and recycling practices to minimize pollution.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <img src="img/animated-teamwork.gif" alt="Community Employment" class="w-12 h-12 animate-pulse">
+                    <div>
+                        <h3 class="font-bold text-lg">Community Employment</h3>
+                        <p>Hire individuals dedicated to environmental preservation, fostering growth and stability.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <img src="img/public-awareness.gif" alt="Public Awareness" class="w-12 h-12 animate-wiggle">
+                    <div>
+                        <h3 class="font-bold text-lg">Public Awareness</h3>
+                        <p>Educate the community about waste management and environmental sustainability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="climate-change" class="p-8 bg-gray-200 text-gray-800 rounded-lg shadow-md my-6 mx-4">
+            <h2 class="text-2xl font-bold mb-4">Understanding Climate Change</h2>
+            <p class="mb-4">
+                Climate change is driven by various factors, including greenhouse gas emissions, deforestation, and industrial pollution. These changes lead to severe weather patterns, rising sea levels, and biodiversity loss. For instance, the burning of fossil fuels releases carbon dioxide and methane into the atmosphere, trapping heat and causing global temperatures to rise.
+            </p>
+            <img src="img/climate-change.jpg" alt="Climate Change Effects" class="w-full rounded-lg mb-4">
+            <p>
+                The consequences of climate change affect us all, from increased frequency of natural disasters to the displacement of communities. By taking action now, we can mitigate these effects and work towards a sustainable future for generations to come.
+            </p>
+        </section>
+
+        <!-- Air Quality Index Section -->
+        <section id="aqi" class="p-8 bg-white text-gray-800 rounded-lg shadow-md my-6 mx-4">
+            <h2 class="text-2xl font-bold mb-4">Air Quality Index (AQI)</h2>
+            <p>
+                The AQI is a measure of air quality that informs the public about how polluted the air is and how it affects health.
+            </p>
+            <p>
+                Understanding the AQI is crucial for protecting public health, especially for sensitive groups such as children, the elderly, and individuals with respiratory conditions. By staying informed about air quality, we can take appropriate actions to safeguard our health and the environment.
+            </p><br>
+            <a href="aqi.html" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-200">View AQI Data</a>
+        </section>
+
+        <!-- Job Enrollment Section -->
+        <section class="p-8 bg-white text-gray-800 rounded-lg shadow-md my-6 mx-4">
+            <h2 class="text-2xl font-bold mb-4"><i class="fa-solid fa-user"></i>  Job Enrollment</h2>
+            <p class="mb-4">
+                Looking for job opportunities? Join our team and contribute to environmental preservation efforts. We offer various positions aimed at tackling environmental issues, providing you with the chance to make a real impact while developing your career.
+            </p>
+            <p class="mb-4">
+                Our job enrollment program is designed for individuals passionate about sustainability and community engagement. Whether you're a seasoned professional or just starting out, we welcome you to apply and be part of our mission.
+            </p>
+            <a href="job-enrollment.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition duration-200">Enroll Now</a>
+        </section>
+    </main>    
+
+    <!-- Footer -->
+    <footer class="bg-green-800 p-4 text-center mt-auto">
+        <b><p>&copy; 2024 Planet Pledge. All rights reserved.</p></b>
+    </footer>
+
+    <script>
+        const profilePic = document.getElementById('profile-pic');
+        const dropdown = document.getElementById('profile-dropdown');
+
+        profilePic.addEventListener('click', function () {
+            dropdown.classList.toggle('show');
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#profile-pic')) {
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        };
+    </script>
+    <script src="js/fectchheaderlog.js"></script>
+</body>
+</html>

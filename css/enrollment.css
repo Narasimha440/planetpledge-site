@@ -1,0 +1,30 @@
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+.form-container {
+    background-color: #35d63a;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.input-field {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: black;
+    font-weight: bold;
+}
+.input-field:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    border-color: #4caf50;
+}
+.submit-button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+}
+.submit-button:hover {
+    background-color: #66bb6a;
+}

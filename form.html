@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanetPledge - Login or Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></script>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="login-page">
+
+        <div class="video-section">
+            <video id="background-video" autoplay muted loop>
+                <source src="vid/formsection5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">
+                PlanetPledge
+                <div class="animated-line"></div>
+                <div class="subtitle">Join the movement for a greener future</div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-container">
+                <h1 class="text-2xl font-bold text-center mb-6">Login or Register</h1>
+                <form id="auth-form">
+                    <div class="relative">
+                        <input type="email" id="email" class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                        <label for="email" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-gray-200 dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"><i class="fa-solid fa-at"></i>   Email</label>
+                    </div><br>
+
+                    <div class="relative">
+                        <input type="password" id="password" class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
+                        <label for="password" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-gray-200 dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"><i class="fa-solid fa-lock"></i>    Password</label>
+                    </div><br>
+
+                    <div class="text-center mb-4">
+                        <button type="button" id="login-btn" class="px-4 py-2 bg-green-600 text-white rounded shadow hover:bg-green-700">Login</button>
+                        <button type="button" id="signup-btn" class="px-4 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 ml-2">Sign Up</button>
+                    </div>
+
+                    <div class="text-center mb-4">
+                        <button type="button" id="forgot-password-btn" class="text-sm text-blue-600 hover:underline">Forgot Password?</button>
+                    </div>
+
+                    <div class="text-center mb-4">
+                        <p>Or login using:</p>
+                        <button type="button" id="google-btn" class="px-4 py-2 bg-red-600 text-white rounded shadow hover:bg-red-700">
+                            <i class="fab fa-google mr-2"></i>Login with Google
+                        </button>
+                    </div>
+                </form>
+
+                <div id="loading-spinner" class="hidden text-center">
+                    <p>Loading...</p>
+                    <div class="animate-spin rounded-full h-8 w-8 border-t-4 border-b-4 border-green-500 mx-auto"></div>
+                </div>
+
+                <p id="auth-message" class="text-center text-red-500 mt-4"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/loopplayer.js"></script>
+    <script>
+        const maintenanceMode = false;
+    
+        if (maintenanceMode) {
+            window.location.href = 'maintenance.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - PlanetPledge</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <style>
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #22c55e;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="center">
+        <div class="text-center">
+            <div class="spinner mx-auto"></div>
+            <p class="mt-4 text-xl font-bold">Saving the planet one logout at a time...</p>
+            <p class="mt-2 text-lg text-gray-500">But don't worry, the trees will miss you!</p>
+        </div>
+    </div>
+
+    <script>const firebaseConfig={apiKey:"AIzaSyCTG4dGPl2g-91KyhQ6pAnmUUZ7gEdYA_U",authDomain:"planetpledgeform-8351f.firebaseapp.com",databaseURL:"https://planetpledgeform-8351f-default-rtdb.firebaseio.com",projectId:"planetpledgeform-8351f",storageBucket:"planetpledgeform-8351f.appspot.com",messagingSenderId:"716897204811",appId:"1:716897204811:web:44025dd86c0eafa2816bce"};firebase.initializeApp(firebaseConfig);firebase.auth().signOut().then(()=>{window.location.href="index.html"})["catch"](error=>{console.error("Logout failed:",error)});</script>
+</body>
+</html>

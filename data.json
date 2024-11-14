@@ -1,0 +1,414 @@
+{
+    "records": [
+        {
+            "country": "India",
+            "state": "Chhattisgarh",
+            "city": "Bhilai",
+            "station": "Hathkhoj, Bhilai - CECB",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "21.224231",
+            "longitude": "81.408350",
+            "aqi_value": "20"
+        },
+        {
+            "country": "India",
+            "state": "Chhattisgarh",
+            "city": "Chhal",
+            "station": "Nawapara SECL Colony, Chhal - CECB",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "22.118125",
+            "longitude": "83.140608",
+            "aqi_value": "40"
+        },
+        {
+            "country": "India",
+            "state": "Arunachal_Pradesh",
+            "city": "Naharlagun",
+            "station": "Naharlagun, Naharlagun - APSPCB",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "27.103358",
+            "longitude": "93.679645",
+            "aqi_value": "3"
+        },
+        {
+            "country": "India",
+            "state": "Delhi",
+            "city": "Delhi",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "28.815329",
+            "longitude": "77.153010",
+            "aqi_value": "171"
+        },
+        {
+            "country": "India",
+            "state": "Hafiz Bagh",
+            "city": "Bandipur",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "34.1483",
+            "longitude": "74.8112",
+            "aqi_value": "63"
+        },
+        {
+            "country": "India",
+            "state": "Hamdaniya Colony",
+            "city": "Sopur",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "34.0670",
+            "longitude": "74.7600",
+            "aqi_value": "53"
+        },
+        {
+            "country": "India",
+            "state": "Guru Tej Bahadur Nagar",
+            "city": "Jalandhar",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "28.6988",
+            "longitude": "77.2047",
+            "aqi_value": "53"
+        },
+        {
+            "country": "India",
+            "state": "Daria",
+            "city": "Chandigarh",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "30.6985796",
+            "longitude": "76.8137038",
+            "aqi_value": "164"
+        },
+        {
+            "country": "India",
+            "state": "Rohini Sector 7",
+            "city": "New Delhi",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "28.7105",
+            "longitude": "77.1198",
+            "aqi_value": "494"
+        },
+        {
+            "country": "India",
+            "state": "GVM Coorporation",
+            "city": "Visakhapatnam",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "17.686815",
+            "longitude": "83.218483",
+            "aqi_value": "163"
+        },
+        {
+            "country": "India",
+            "state": "Nellore",
+            "city": "Andhra Pradesh",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "14.4426",
+            "longitude": "79.9865",
+            "aqi_value": "59"
+        },
+        {
+            "country": "India",
+            "state": "Arumbakkam",
+            "city": "Chennai",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "13.0724",
+            "longitude": "80.2102",
+            "aqi_value": "88"
+        },
+        {
+            "country": "India",
+            "state": "Sanath Nagar",
+            "city": "Hyderabad",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "17.4563",
+            "longitude": "78.4439",
+            "aqi_value": "103"
+        },
+        {
+            "country": "India",
+            "state": "Arunachal Pradesh",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "28.2180",
+            "longitude": "94.7278",
+            "aqi_value": "38"
+        },
+        {
+            "country": "India",
+            "state": "Assam",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "26.2006",
+            "longitude": "92.9376",
+            "aqi_value": "44"
+        },
+        {
+            "country": "India",
+            "state": "Bihar",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "25.9644",
+            "longitude": "85.2722",
+            "aqi_value": "91"
+        },
+        {
+            "country": "India",
+            "state": "Dadra and Nagar Haveli",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "20.1809",
+            "longitude": "73.0169",
+            "aqi_value": "144"
+        },
+        {
+            "country": "India",
+            "state": "Goa",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "15.2993",
+            "longitude": "74.1240",
+            "aqi_value": "99"
+        },
+        {
+            "country": "India",
+            "state": "Gujarat",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "22.6708",
+            "longitude": "71.5724",
+            "aqi_value": "119"
+        },
+        {
+            "country": "India",
+            "state": "Haryana",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "29.0588",
+            "longitude": "76.0856",
+            "aqi_value": "159"
+        },
+        {
+            "country": "India",
+            "state": "Himachal Pradesh",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "32.1024",
+            "longitude": "77.5619",
+            "aqi_value": "85"
+        },
+        {
+            "country": "India",
+            "state": "Jammu and Kashmir",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "33.2778",
+            "longitude": "75.3412",
+            "aqi_value": "72"
+        },
+        {
+            "country": "India",
+            "state": "Jharkhand",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "23.6913",
+            "longitude": "85.2722",
+            "aqi_value": "77"
+        },
+        {
+            "country": "India",
+            "state": "Karnataka",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "15.3173",
+            "longitude": "75.7139",
+            "aqi_value": "73"
+        },
+        {
+            "country": "India",
+            "state": "Kerala",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "10.1632",
+            "longitude": "76.6413",
+            "aqi_value": "60"
+        },
+        {
+            "country": "India",
+            "state": "Madhya Pradesh",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "22.9734",
+            "longitude": "78.6569",
+            "aqi_value": "86"
+        },
+        {
+            "country": "India",
+            "state": "Maharashtra",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "19.7515",
+            "longitude": "75.7139",
+            "aqi_value": "116"
+        },
+        {
+            "country": "India",
+            "state": "Manipur",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "24.6637",
+            "longitude": "93.9063",
+            "aqi_value": "36"
+        },
+        {
+            "country": "India",
+            "state": "Meghalaya",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "25.4670",
+            "longitude": "91.3662",
+            "aqi_value": "92"
+        },
+        {
+            "country": "India",
+            "state": "Mizoram",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "23.1645",
+            "longitude": "92.9376",
+            "aqi_value": "14"
+        },
+        {
+            "country": "India",
+            "state": "Nagaland",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "26.1584",
+            "longitude": "94.5624",
+            "aqi_value": "56"
+        },
+        {
+            "country": "India",
+            "state": "Odisha",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "20.2376",
+            "longitude": "84.2700",
+            "aqi_value": "66"
+        },
+        {
+            "country": "India",
+            "state": "Puducherry",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "11.9416",
+            "longitude": "79.8083",
+            "aqi_value": "151"
+        },
+        {
+            "country": "India",
+            "state": "Rajasthan",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "27.0238",
+            "longitude": "74.2179",
+            "aqi_value": "132"
+        },
+        {
+            "country": "India",
+            "state": "Sikkim",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "27.3516",
+            "longitude": "88.3239",
+            "aqi_value": "17"
+        },
+        {
+            "country": "India",
+            "state": "Tamil Nadu",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "11.1271",
+            "longitude": "78.6569",
+            "aqi_value": "95"
+        },
+        {
+            "country": "India",
+            "state": "Telangana",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "18.1124",
+            "longitude": "79.0193",
+            "aqi_value": "81"
+        },
+        {
+            "country": "India",
+            "state": "Tripura",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "23.5639",
+            "longitude": "91.6761",
+            "aqi_value": "116"
+        },
+        {
+            "country": "India",
+            "state": "Uttarpradesh",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "27.5706",
+            "longitude": "80.0982",
+            "aqi_value": "108"
+        },
+        {
+            "country": "India",
+            "state": "Uttarakhand",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "30.0668",
+            "longitude": "79.0193",
+            "aqi_value": "122"
+        },
+        {
+            "country": "India",
+            "state": "West Bengal",
+            "city": "-",
+            "station": "Alipur, Delhi - DPCC",
+            "last_update": "18-10-2024 16:00:00",
+            "latitude": "22.9868",
+            "longitude": "87.8550",
+            "aqi_value": "89"
+        }
+    ]
+}

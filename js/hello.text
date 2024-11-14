@@ -1,0 +1,6 @@
+<p>Hello,</p>
+<p>Follow this link to reset your %APP_NAME% password for your %EMAIL% account.</p>
+<p><a href='%LINK%'>%LINK%</a></p>
+<p>If you didn’t ask to reset your password, you can ignore this email.</p>
+<p>Thanks,</p>
+<p>Your %APP_NAME% team</p>

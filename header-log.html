@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged-In Header</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .dropdown.show .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+        .swipe-button {
+            transition: transform 0.3s ease;
+        }
+        .swipe-button:hover {
+            transform: translateX(5px);
+        }
+
+        .dropdown-item {
+            position: relative;
+            overflow: hidden;
+        }
+        .dropdown-item .bg-slide {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
+            z-index: 0;
+        }
+        .dropdown-item:hover .bg-slide {
+            transform: translateX(0);
+        }
+        .dropdown-item:hover .text {
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: rgba(34, 139, 34, 0.8);
+            padding: 10px 0;
+        }
+
+        #heading {
+            position: absolute;
+            padding-left: 30px;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="flex items-center justify-between p-4 bg-green-800">
+        <div class="flex items-center">
+            <a href="index.html">
+                <img src="img/planetpledgeclean.png" alt="Planet Pledge Logo" class="h-10" draggable="false">
+            </a>
+            <span id="heading" class="ml-4 text-xl font-bold">PlanetPledge</span>
+        </div>
+        <nav>
+            <a href="loghome.html" class="px-4 py-2 bg-green-600 shadow-lg shadow-green-600/50 text-white rounded hover:bg-green-700" style="margin-left: 500px;">Home</a>
+            <a href="aqi.html" class="px-4 py-2 bg-green-600 shadow-lg shadow-green-600/50 text-white rounded hover:bg-green-700">Air Quality Index</a>
+            <a href="donation.html" class="px-4 py-2 bg-green-600 shadow-lg shadow-green-600/50 text-white rounded hover:bg-green-700">Donate Now</a>
+            <div id="profile-dropdown" class="dropdown relative">
+                <img id="profile-pic" src="img/default-profile-picture-url.png" alt="Profile Pic" class="h-10 w-10 rounded-full cursor-pointer" draggable="false" style="margin-top: -10px;">
+                <div class="dropdown-content hidden bg-white rounded shadow-lg mt-2 p-4">
+                    <div class="dropdown-item">
+                        <a href="my-account.html" class="block text-gray-700 py-2 swipe-button">
+                            <span class="bg-slide bg-green-600"></span>
+                            <span class="text">My Account</span>
+                        </a>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="job-application.html" class="block text-gray-700 py-2 swipe-button">
+                            <span class="bg-slide bg-green-600"></span>
+                            <span class="text">Job Application</span>
+                        </a>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="#" class="block text-gray-700 py-2 swipe-button" onclick="logout()">
+                            <span class="bg-slide bg-red-600"></span>
+                            <span class="text"><strong>Logout</strong></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const profilePic = document.getElementById('profile-pic');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        const profileDropdown = document.getElementById('profile-dropdown');
+        let dropdownTimeout;
+
+        profilePic.addEventListener('click', () => {
+            dropdownContent.classList.toggle('hidden');
+            profileDropdown.classList.toggle('show');
+
+            clearTimeout(dropdownTimeout);
+            
+            if (!dropdownContent.classList.contains('hidden')) {
+                dropdownTimeout = setTimeout(() => {
+                    dropdownContent.classList.add('hidden');
+                    profileDropdown.classList.remove('show');
+                }, 4000);
+            }
+        });
+
+        dropdownContent.addEventListener('mouseover', () => {
+            clearTimeout(dropdownTimeout);
+        });
+
+        dropdownContent.addEventListener('mouseout', () => {
+            dropdownTimeout = setTimeout(() => {
+                dropdownContent.classList.add('hidden');
+                profileDropdown.classList.remove('show');
+            }, 4000);
+        });
+
+        // Optional logout function
+        function logout() {
+            // Implement logout logic here
+            
+            // Redirect to index.html after logout
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

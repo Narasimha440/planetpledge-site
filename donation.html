@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Planet Pledge</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/donation.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <!-- QR Code library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<style>
+    .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            transition: opacity 0.2s ease-in-out;
+            top: 100%;
+            opacity: 0;
+        }
+        .dropdown.show .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+        .swipe-button {
+            transition: transform 0.3s ease;
+        }
+        .swipe-button:hover {
+            transform: translateX(5px);
+        }
+
+        .dropdown-item {
+            position: relative;
+            overflow: hidden;
+        }
+        .dropdown-item .bg-slide {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
+            z-index: 0;
+        }
+        .dropdown-item:hover .bg-slide {
+            transform: translateX(0);
+        }
+        .dropdown-item:hover .text {
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: rgba(34, 139, 34, 0.8);
+            padding: 10px 0;
+        }
+
+        #heading {
+            position: absolute;
+            padding-left: 30px;
+            margin-top: -5px;
+        }
+
+        .nav-but {
+            margin-right: 60px;
+        }
+
+        #profile-pic {
+            margin-left: 380px;
+            
+        }
+
+        header .nav-but {
+            display: flex;
+            align-items: center;
+        }
+
+        #profile-pic {
+            margin-left: 20px; /* Adjust space between buttons and profile picture */
+        }
+</style>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Firebase Configuration -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCTG4dGPl2g-91KyhQ6pAnmUUZ7gEdYA_U",
+            authDomain: "planetpledgeform-8351f.firebaseapp.com",
+            databaseURL: "https://planetpledgeform-8351f-default-rtdb.firebaseio.com",
+            projectId: "planetpledgeform-8351f",
+            storageBucket: "planetpledgeform-8351f.appspot.com",
+            messagingSenderId: "716897204811",
+            appId: "1:716897204811:web:44025dd86c0eafa2816bce"
+        };
+        
+        const app = firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+    </script>
+
+    <!-- Header -->
+    <header class="flex flex-wrap items-center justify-between p-4 bg-green-800">
+        <div class="flex items-center">
+            <a href="index.html">
+                <img src="img/planetpledgeclean.png" alt="Planet Pledge Logo" class="h-10">
+            </a>
+            <span class="ml-4 text-xl font-bold text-white">PlanetPledge</span>
+        </div>
+        <nav class="flex items-center space-x-4">
+            <a href="loghome.html" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Home</a>
+            <a href="aqi.html" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Air Quality Index</a>
+            <div id="profile-dropdown" class="dropdown relative flex items-center">
+                <img id="profile-pic" src="img/default-profile-picture-url.png" alt="Profile Pic" class="h-10 w-10 rounded-full cursor-pointer" draggable="false">
+                <div class="dropdown-content hidden bg-white rounded shadow-lg mt-2 p-4 absolute right-0">
+                    <div class="dropdown-item">
+                        <a href="my-account.html" class="block text-gray-700 py-2 swipe-button">
+                            <span class="bg-slide bg-green-600"></span>
+                            <span class="text">My Account</span>
+                        </a>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="enrollnow.html" class="block text-gray-700 py-2 swipe-button">
+                            <span class="bg-slide bg-green-600"></span>
+                            <span class="text">Job Application</span>
+                        </a>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="logout.html" class="block text-gray-700 py-2 swipe-button">
+                            <span class="bg-slide bg-red-600"></span>
+                            <span class="text"><strong>Logout</strong></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header><br><br><br>
+
+    <!-- Main Content -->
+    <main class="p-8 bg-white shadow-md my-6 mx-4 rounded-lg flex-grow">
+        <h1 class="text-2xl font-bold mb-4">Donate to Planet Pledge</h1>
+        <p class="text-gray-700 mb-6">Your donation helps us protect the environment and promote sustainability worldwide. Every contribution counts!</p>
+
+        <form id="donationForm" class="space-y-6">
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg border border-gray-300">
+                <!-- Email Field -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="email" required class="mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                </div>
+
+                <!-- Donation Amount (INR) -->
+                <div>
+                    <label for="amount" class="block text-sm font-medium text-gray-700">Donation Amount (INR)</label>
+                    <input type="number" id="amount" name="amount" min="1" step="1" required class="mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" placeholder="Enter amount in INR">
+                </div>
+
+                <!-- Payment Button -->
+                <button type="button" id="proceedButton" class="w-full mt-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600">Proceed to Payment</button>
+            </div>
+
+            <!-- Success Message -->
+            <p id="successMessage" class="text-green-700 mt-4 hidden">Thank you for your donation!</p>
+        </form>
+
+
+        <!-- Success Message -->
+        <p id="successMessage" class="text-green-700 mt-4 hidden">Thank you for your donation!</p>
+    </main>
+
+    <!-- Modal -->
+    <div id="qrModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center hidden">
+        <div class="bg-white rounded-lg shadow-lg p-8 max-w-md mx-auto relative">
+            <!-- Close button (X) -->
+            <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+                &times;
+            </button>
+
+            <h2 class="text-xl font-bold mb-4">Scan the QR Code to Pay</h2>
+
+            <!-- QR Code with shadow -->
+            <div id="qrCode" class="mb-4 p-2 shadow-lg"></div>
+
+            <input type="text" id="transactionId" placeholder="Enter Transaction ID" class="mt-1 p-2 border border-gray-300 rounded w-full">
+            <button id="submitTransaction" class="mt-4 w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Submit Transaction ID</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 p-4 text-center text-white mt-auto">
+        <p>&copy; 2024 Planet Pledge. All rights reserved.</p>
+    </footer>
+
+    <script src="js/donation.js"></script>
+    <script>
+                const profilePic = document.getElementById('profile-pic');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        const profileDropdown = document.getElementById('profile-dropdown');
+        let dropdownTimeout;
+
+        profilePic.addEventListener('click', () => {
+            dropdownContent.classList.toggle('hidden');
+            profileDropdown.classList.toggle('show');
+
+            clearTimeout(dropdownTimeout);
+            
+            if (!dropdownContent.classList.contains('hidden')) {
+                dropdownTimeout = setTimeout(() => {
+                    dropdownContent.classList.add('hidden');
+                    profileDropdown.classList.remove('show');
+                }, 4000);
+            }
+        });
+
+        dropdownContent.addEventListener('mouseover', () => {
+            clearTimeout(dropdownTimeout);
+        });
+
+        dropdownContent.addEventListener('mouseout', () => {
+            dropdownTimeout = setTimeout(() => {
+                dropdownContent.classList.add('hidden');
+                profileDropdown.classList.remove('show');
+            }, 4000);
+        });
+
+        // Optional logout function
+        function logout() {
+            // Implement logout logic here
+            
+            // Redirect to index.html after logout
+            window.location.href = 'index.html';
+        }
+    </script>
+    <script>
+        const maintenanceMode = false;
+    
+        if (maintenanceMode) {
+            window.location.href = 'maintenance.html';
+        }
+    </script>
+</body>
+</html>
