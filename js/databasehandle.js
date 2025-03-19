@@ -1,13 +1,13 @@
 document.addEventListener('contextmenu', event => event.preventDefault());
 
 const firebaseConfig = {
-    apiKey: "YOUR-API-KEY",
-    authDomain: "YOUR-AUTH-DOMAIN",
-    databaseURL: "YOUR-DATABASE-URL",
-    projectId: "YOUR-PROJECT-ID",
-    storageBucket: "YOUR-STORAGE-BUCKET",
-    messagingSenderId: "YOUR-MESSAGING-SENDER-ID",
-    appId: "YOUR-APP-ID"
+    apiKey: "AIzaSyDJ2ZZvAMpWKdiE2VWThjpF0q_jL892LXs",
+    authDomain: "planetpledge-da56f.firebaseapp.com",
+    databaseURL: "https://planetpledge-da56f-default-rtdb.firebaseio.com",
+    projectId: "planetpledge-da56f",
+    storageBucket: "planetpledge-da56f.appspot.com",
+    messagingSenderId: "66399642910",
+    appId: "1:66399642910:web:149ac94cd53dd532c3d50f"
 };
 
 firebase.initializeApp(firebaseConfig);
