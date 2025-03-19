@@ -1,11 +1,11 @@
 const firebaseConfig = {
-    apiKey: "YOUR-API-KEY",
-    authDomain: "YOUR-AUTH-DOMAIN",
-    databaseURL: "YOUR-DATABASE-URL",
-    projectId: "YOUR-PROJECT-ID",
-    storageBucket: "YOUR-STORAGE-BUCKET",
-    messagingSenderId: "YOUR-MESSAGING-SENDER-ID",
-    appId: "YOUR-APP-ID"
+    apiKey: "AIzaSyCTG4dGPl2g-91KyhQ6pAnmUUZ7gEdYA_U",
+    authDomain: "planetpledgeform-8351f.firebaseapp.com",
+    databaseURL: "https://planetpledgeform-8351f-default-rtdb.firebaseio.com",
+    projectId: "planetpledgeform-8351f",
+    storageBucket: "planetpledgeform-8351f.appspot.com",
+    messagingSenderId: "716897204811",
+    appId: "1:716897204811:web:44025dd86c0eafa2816bce"
 };
 
 // Initialize Firebase
